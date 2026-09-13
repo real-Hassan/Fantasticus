@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <div class="bg-animated"></div>
+    <header class="glass-header">
         <div class="logo">Arda & Beyond 🗿</div>
-        <!-- NAVBAR PLACEHOLDER: Leave empty for feature-navbar branch -->
         <nav>
-            <div class="hamburger" id="hamburger">☰</div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
             <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">Lore</a></li>
                 <li><a href="gallery.html">Artifacts</a></li>
-                <li><a href="contact.html">Submit Entry</a></li>
+                <li><a href="contact.html">Submit</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>Chronicles of the First Age</h1>
-            <p>A compendium of high fantasy lore, from the depths of The Silmarillion to the halls of Hogwarts.</p>
+        <section class="hero glass-panel fade-in">
+            <h1>Chronicles of the First Age & Beyond</h1>
+            <p>Welcome, seeker of hidden knowledge. This compendium safeguards the highest of fantasy lore, bridging the vast gulf between the Elder Days of Middle-earth and the hidden magical societies of the modern world.</p>
+            <p>Within these pages, you will find accounts of the creation of Arda and the secrets of Hogwarts. We chronicle the tragic oath of Fëanor, the journey of Bilbo Baggins in *The Hobbit*, the treacherous history of the Deathly Hallows, and the ancient magics that bind both realms.</p>
+            <a href="about.html" class="btn-primary">Enter the Archives</a>
         </section>
     </main>
-    <footer>
+    <footer class="glass-footer">
         <p>&copy; 2026 The Lore Archive. Dedicated to the pursuit of knowledge.</p>
     </footer>
     <script src="js/script.js"></script>

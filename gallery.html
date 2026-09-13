@@ -7,23 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <div class="bg-animated"></div>
+    <header class="glass-header">
         <div class="logo">Arda & Beyond 🗿</div>
-        <!-- Same nav as above -->
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Lore</a></li>
+                <li><a href="gallery.html" class="active">Artifacts</a></li>
+                <li><a href="contact.html">Submit</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <h2>Relics & Maps</h2>
-        <section class="gallery-grid">
-            <div class="gallery-item">
-                <!-- <img src="images/map-beleriand.jpg" alt="Map of Beleriand"> -->
-                <p>Map of Beleriand (Image Placeholder)</p>
-            </div>
-            <div class="gallery-item">
-                <!-- <img src="images/elder-wand.jpg" alt="The Elder Wand"> -->
-                <p>The Elder Wand (Image Placeholder)</p>
-            </div>
-        </section>
+        <div class="glass-panel fade-in">
+            <h2>Relics, Weapons & Maps</h2>
+            <p>Behold the remnants of ages past.</p>
+            <section class="gallery-grid">
+                <div class="gallery-card">
+                    <!-- <div class="image-wrapper"><img src="images/silmarils.jpg" alt="The Three Silmarils"></div> -->
+                    <div class="card-content">
+                        <h3>The Silmarils</h3>
+                        <p>Fëanor crafted the Silmarils in the shape of three great jewels, containing an inner fire made from the blended light of the Trees of Valinor[cite: 4].</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <!-- <div class="image-wrapper"><img src="images/elder-wand.jpg" alt="The Elder Wand"></div> -->
+                    <div class="card-content">
+                        <h3>The Elder Wand</h3>
+                        <p>One of the three Deathly Hallows. Said to be the most powerful wand ever created, boasting a bloody history.</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <!-- <div class="image-wrapper"><img src="images/sting.jpg" alt="Sting"></div> -->
+                    <div class="card-content">
+                        <h3>Sting</h3>
+                        <p>An Elven shortsword found by Bilbo Baggins in a Troll-hoard during the events of *The Hobbit*. It glows blue when Orcs are near.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+    <footer class="glass-footer">
+        <p>&copy; 2026 The Lore Archive.</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

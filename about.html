@@ -7,30 +7,47 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <div class="bg-animated"></div>
+    <header class="glass-header">
         <div class="logo">Arda & Beyond 🗿</div>
         <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Lore</a></li>
+                <li><a href="about.html" class="active">Lore</a></li>
                 <li><a href="gallery.html">Artifacts</a></li>
-                <li><a href="contact.html">Submit Entry</a></li>
+                <li><a href="contact.html">Submit</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Tomes of Old</h2>
-        <div class="accordion">
-            <button class="accordion-btn">The Tale of Beren and Lúthien</button>
-            <div class="panel" style="display: none;">
-                <p>A romance that defied the shadow of Morgoth, central to the histories of Beleriand.</p>
-            </div>
-            <button class="accordion-btn">The Horcruxes</button>
-            <div class="panel" style="display: none;">
-                <p>Objects of dark magic concealing fragments of a wizard's soul.</p>
+        <div class="glass-panel fade-in">
+            <h2>Tomes of Old & Great Deeds</h2>
+            <p>Explore the deepest legends recorded by the scholars of Rivendell and the restricted section of the Hogwarts library.</p>
+            
+            <div class="accordion-container">
+                <button class="accordion-btn">The Valar & The Ainur</button>
+                <div class="panel">
+                    <p>The Elves call the great spirits the Valar, who are the Powers of Arda, while Men often refer to them as gods[cite: 4]. The hierarchy consists of seven Lords of the Valar and seven Queens, known as the Valier[cite: 4]. Manwë and Melkor were originally brethren in the thought of Ilúvatar, but Manwë understands Ilúvatar's purposes most clearly[cite: 4].</p>
+                </div>
+                
+                <button class="accordion-btn">The Horcruxes of Tom Riddle</button>
+                <div class="panel">
+                    <p>The darkest of magical arts in the Wizarding World. A Horcrux is an object in which a Dark wizard has hidden a fragment of their soul to attain immortality. Lord Voldemort created seven, anchoring himself to the mortal plane.</p>
+                </div>
+
+                <button class="accordion-btn">The Rings of Power</button>
+                <div class="panel">
+                    <p>Forged in the Second Age of Middle-earth, these rings were intended to preserve the Elven realms. However, the Dark Lord Sauron forged the One Ring in the fires of Mount Doom to rule them all, a tale famously chronicled in *The Lord of the Rings*.</p>
+                </div>
             </div>
         </div>
     </main>
+    <footer class="glass-footer">
+        <p>&copy; 2026 The Lore Archive.</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
