@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit | The Lore Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Arda & Beyond 🗿</div>
+        <!-- Same nav as above -->
+    </header>
+    <main>
+        <h2>Submit a Missing Lore Entry</h2>
+        <form id="loreForm">
+            <label for="scholarName">Your Name:</label>
+            <input type="text" id="scholarName">
+            <span id="nameError" class="error">Name is required to submit lore.</span>
+
+            <label for="loreEntry">The Lore:</label>
+            <textarea id="loreEntry" rows="5"></textarea>
+            <span id="loreError" class="error">The archives cannot accept empty scrolls.</span>
+
+            <button type="submit">Submit to Archives</button>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
