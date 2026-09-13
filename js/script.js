@@ -20,37 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- 2. ACCORDION LOGIC ---
-    const accordions = document.querySelectorAll('.accordion-btn');
-
-    accordions.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Close all other panels for a clean UI experience
-            accordions.forEach(otherBtn => {
-                if (otherBtn !== this && otherBtn.classList.contains('active')) {
-                    otherBtn.classList.remove('active');
-                    otherBtn.nextElementSibling.style.maxHeight = null;
-                    otherBtn.nextElementSibling.style.padding = "0 1.2rem";
-                    otherBtn.nextElementSibling.style.borderColor = "transparent";
+        const accordions = document.querySelectorAll('.accordion-btn');
+    
+        accordions.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Close all other panels for a clean UI experience
+                accordions.forEach(otherBtn => {
+                    if (otherBtn !== this && otherBtn.classList.contains('active')) {
+                        otherBtn.classList.remove('active');
+                        otherBtn.nextElementSibling.style.maxHeight = null;
+                        otherBtn.nextElementSibling.style.padding = "0 1.2rem";
+                    }
+                });
+    
+                // Toggle current panel
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                
+                if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                    // Closing
+                    panel.style.maxHeight = null;
+                    panel.style.padding = "0 1.2rem";
+                } else {
+                    // Opening - safely expands up to 500px to fit text and links perfectly
+                    panel.style.maxHeight = "500px";
+                    panel.style.padding = "1.2rem";
                 }
             });
-
-            // Toggle current panel
-            this.classList.toggle('active');
-            const panel = this.nextElementSibling;
-            
-            if (panel.style.maxHeight) {
-                // Closing
-                panel.style.maxHeight = null;
-                panel.style.padding = "0 1.2rem";
-                panel.style.borderColor = "transparent";
-            } else {
-                // Opening
-                panel.style.maxHeight = panel.scrollHeight + 30 + "px";
-                panel.style.padding = "1.2rem";
-                panel.style.borderColor = "var(--accent-glow)";
-            }
         });
-    });
 
     // --- 3. FORM VALIDATION LOGIC ---
     const form = document.getElementById('loreForm');
