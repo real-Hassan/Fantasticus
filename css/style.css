@@ -169,3 +169,36 @@ footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size:
     .split-layout { grid-template-columns: 1fr; gap: 2rem; }
     .hero-image { height: 400px; }
 }
+
+/* --- TABLE STYLING --- */
+.lore-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.lore-table th {
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-gold);
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.lore-table td {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Subtle hover effect for table rows */
+.lore-table tbody tr {
+    transition: var(--transition);
+}
+
+.lore-table tbody tr:hover td {
+    color: var(--accent-gold);
+}
