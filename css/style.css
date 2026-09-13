@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-    --bg-dark: #121a16; /* Deep forest green */
-    --text-light: #f0eadd; /* Cream/parchment */
-    --text-muted: #9ba6a0;
-    --accent-gold: #cba052;
-    --border-subtle: rgba(203, 160, 82, 0.2);
+    --bg-dark: #1a0f11; /* Very dark wine/burgundy */
+    --text-light: #fdf5e6; /* Old parchment */
+    --text-muted: #a69698; /* Muted rose-grey */
+    --accent-gold: #d48c70; /* Worn copper */
+    --border-subtle: rgba(212, 140, 112, 0.15);
     --transition: all 0.4s ease;
 }
 
@@ -32,15 +32,41 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5%;
+    padding: 1.5rem 5%;
     border-bottom: 1px solid var(--border-subtle);
 }
 
-.logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; color: var(--accent-gold); }
+.logo { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.8rem; 
+    font-style: italic; 
+    color: var(--accent-gold); 
+}
 
-nav ul { list-style: none; display: flex; gap: 2.5rem; }
-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: var(--transition); padding-bottom: 0.3rem; }
-nav a:hover, nav a.active { color: var(--text-light); border-bottom: 1px solid var(--accent-gold); }
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 0.5rem; 
+    background: rgba(255, 255, 255, 0.02); /* Creates the capsule container */
+    padding: 0.4rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-subtle);
+}
+
+nav a { 
+    color: var(--text-muted); 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    letter-spacing: 0.5px;
+    transition: var(--transition); 
+    padding: 0.5rem 1.2rem; 
+    border-radius: 30px; /* Rounded pill links */
+}
+
+nav a:hover, nav a.active { 
+    color: var(--bg-dark); 
+    background: var(--accent-gold); /* Fills the pill instead of underlining */
+}
 
 /* --- MAIN CONTAINER & ASYMMETRICAL LAYOUT --- */
 main { flex: 1; padding: 4rem 5%; max-width: 1400px; margin: 0 auto; width: 100%; }
@@ -49,7 +75,7 @@ main { flex: 1; padding: 4rem 5%; max-width: 1400px; margin: 0 auto; width: 100%
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .hero-text p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 90%; }
@@ -66,15 +92,22 @@ main { flex: 1; padding: 4rem 5%; max-width: 1400px; margin: 0 auto; width: 100%
 
 /* --- BUTTONS --- */
 .btn-outline {
+    background: transparent; /* Removes the default white browser background */
+    color: var(--accent-gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; /* Ensures the button text matches the link text */
     display: inline-block;
     padding: 0.8rem 2rem;
     border: 1px solid var(--border-subtle);
-    color: var(--accent-gold);
     text-decoration: none;
-    font-family: 'Playfair Display', serif;
+    cursor: pointer;
     transition: var(--transition);
 }
-.btn-outline:hover { background: var(--accent-gold); color: var(--bg-dark); }
+
+.btn-outline:hover { 
+    background: var(--accent-gold); 
+    color: var(--bg-dark); 
+}
 
 /* --- GALLERY --- */
 .gallery-grid {

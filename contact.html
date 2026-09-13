@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit | The Lore Archive</title>
+    <title>Submit | Fantasticus</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bg-animated"></div>
-    <header class="glass-header">
-        <div class="logo">Arda & Beyond 🗿</div>
+    <header>
+        <div class="logo">Fantasticus</div>
         <nav>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">Lore</a></li>
@@ -22,28 +18,32 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="glass-panel fade-in form-container">
-            <h2>Submit a Missing Lore Entry</h2>
-            <p>Contribute your knowledge of Middle-earth or the Wizarding World.</p>
-            <form id="loreForm" novalidate>
+        <section class="split-layout">
+            <div class="hero-text">
+                <span class="subtitle">Join the Archives</span>
+                <h2>Submit a Missing Lore Entry</h2>
+                <p>Are we missing a crucial piece of history? Contribute your knowledge of Middle-earth or the Wizarding World.</p>
+            </div>
+            
+            <form id="loreForm" class="form-container" novalidate>
                 <div class="input-group">
-                    <label for="scholarName">Your Scholar Name:</label>
-                    <input type="text" id="scholarName" placeholder="e.g. Elrond or Hermione">
-                    <span id="nameError" class="error-msg">A name is required to submit lore.</span>
+                    <input type="text" id="scholarName" placeholder="Your Scholar Name (e.g. Elrond)">
+                    <span id="nameError" class="error-msg" style="display:none; color:#cba052;">A name is required.</span>
                 </div>
                 <div class="input-group">
-                    <label for="loreEntry">The Lore / Legend:</label>
-                    <textarea id="loreEntry" rows="5" placeholder="Transcribe the history here..."></textarea>
-                    <span id="loreError" class="error-msg">The archives cannot accept empty scrolls.</span>
+                    <textarea id="loreEntry" rows="4" placeholder="Transcribe the history here..."></textarea>
+                    <span id="loreError" class="error-msg" style="display:none; color:#cba052;">Scrolls cannot be empty.</span>
                 </div>
-                <button type="submit" class="btn-primary">Submit to Archives</button>
+                <button type="submit" class="btn-outline">Submit to Archives</button>
+                <div id="successMsg" style="display:none; margin-top:1rem; color:var(--text-light);">Lore inscribed!</div>
             </form>
-            <div id="successMsg" class="success-msg hidden">Lore inscribed successfully!</div>
-        </div>
+        </section>
     </main>
-    <footer class="glass-footer">
-        <p>&copy; 2026 The Lore Archive.</p>
+
+    <footer>
+        <p>&copy; 2026 Fantasticus. Dedicated to the pursuit of knowledge.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
